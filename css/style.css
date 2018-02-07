@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+#menu {
+    background-color: #808080;
+    text-align: center;
+    height: 150px;
+    border-bottom: 2px solid black;
+
+
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 3px;
+}
+ul li a:hover{
+    color: 	#FFD7aa;
+}
+.menu-item::before {
+    content: '';
+    border: none;
+    height: 4px;
+    width: 55px;
+    background-color: #808080;
+    position: absolute;
+    top: -3px;
+    /*   Centrowanie w poziomie elemenru left oraz right = 0px margin auto// pozycjonowanie obiektu tak aby znajkdował sięcntralnie na środku działą w przypadku zwryfikowanej szerokości danego elementu*/
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    /*    box-shadow jest to cień belki która została wykonana powyżej w .menu-item::before (od wysokości 40px zdwfiniowanej ramki odjęliśmy -4 px ponieważ o tyle ją przesuneliśmy powyżej aby pokryła się ona z borderem)*/
+    /*    box-shadow: (parametr1 'odstęp od lewej stron' // parament 2 "odstęp od góry topu" // paramentr3 jest to blur czyli rozmycie danego elementu  // paramentr4 kolor elelentu  )*/
+    box-shadow: 0 37px 0px #808080;
+      transition: all 0.1
+
+}
+
+.menu-item::after {
+    content: '';
+    border: none;
+    height: 25px;
+    width: 4px;
+    background-color: #808080;
+    position: absolute;
+    left: -3px;
+    /*    centrujemy w pionie top oraz bottom na 0px + marig:auto;*/
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 67px 0 0px #808080;
+   transition: all 0.1
+}
+.menu-item:hover::before{
+    
+    height:0;
+    width:80px;
+}
+.menu-item:hover::after
+
+{
+    width: 0;
+    height: 80px;
+    
+
+}
+
+.menu-item {
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+    height: 40px;
+    width: 70px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 3px solid #0faa;
+  
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+
+
+}
+
+#right-menu {
+    position: relative;
+    display: inline-block;
+    left: 300px;
+    /*    osdstęp pomiędzy wyrazami*/
+    word-spacing: 3em;
+    /*    odstęp pomiędzy literami*/
+    letter-spacing: 1px;
+
+
+
+}
+
+#left-menu {
+    position: relative;
+    display: inline-block;
+    right: 300px;
+    word-spacing: 4em;
+    letter-spacing: 1px;
+
+}
+
+#menu {
+    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 40%, 0 90%, 0 0);
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    font-size: 70px;
+    /*
